@@ -1,17 +1,20 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const galleryGrid = document.querySelector('.gallery-3column-grid');
+    const marqueeTrack = document.querySelector('.gallery-marquee-track');
     
-    // Generates Panel1.jpg through Panel19.jpg with automated entrance animation properties
-    for (let i = 1; i <= 19; i++) {
-        const itemContainer = document.createElement('div');
-        itemContainer.className = 'gallery-item animate__animated animate__zoomIn';
-        itemContainer.style.animationDelay = `${(i % 5) * 0.1}s`;
-        
-        itemContainer.innerHTML = `
-            <img src="images/Panel${i}.jpg" alt="Shri Narayana Electricals Panel Control Architecture ${i}" onerror="this.src='https://placehold.co/600x500/0A4D92/FFFFFF?text=Panel+Build+${i}';">
-            <p>Panel System Build ${i}</p>
+    // Configured for 20 images using the exact dual file extension seen on your GitHub
+    const totalPanels = 20; 
+    let trackHTML = '';
+
+    // Generate structural markup loops for the sliding elements
+    for (let i = 1; i <= totalPanels; i++) {
+        trackHTML += `
+            <div class="gallery-item">
+                <img src="images/Panel${i}.jpg.jpeg" alt="Shri Narayana Electricals Panel Control Architecture ${i}" onerror="this.src='https://placehold.co/600x500/0A4D92/FFFFFF?text=Panel+Build+${i}';">
+                <p>Panel System Build ${i}</p>
+            </div>
         `;
-        
-        galleryGrid.appendChild(itemContainer);
     }
+
+    // Duplicate track layout inner text completely to make a seamless continuous right-to-left marquee loop
+    marqueeTrack.innerHTML = trackHTML + trackHTML;
 });
