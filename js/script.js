@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     const marqueeTrack = document.querySelector('.gallery-marquee-track');
     
-    // Configured for 20 images using the exact dual file extension seen on your GitHub
-    const totalPanels = 20; 
+    // Total number of panel images uploaded in your images folder
+    const totalPanels = 19; 
     let trackHTML = '';
 
-    // Generate structural markup loops for the sliding elements
+    // Generate elements dynamically using the updated extension format (.jpg.jpeg)
     for (let i = 1; i <= totalPanels; i++) {
         trackHTML += `
             <div class="gallery-item">
@@ -15,6 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
     }
 
-    // Duplicate track layout inner text completely to make a seamless continuous right-to-left marquee loop
+    // Duplicate track to ensure a seamless continuous sliding marquee without gaps
     marqueeTrack.innerHTML = trackHTML + trackHTML;
 });
