@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Top Information Utility Bar */
 .top-info-bar {
     background-color: var(--brand-blue);
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 2px solid var(--border-grey);
 }
 
@@ -72,14 +72,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .top-meta span {
     color: var(--clean-white);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    font-family: var(--font-base);
     display: flex;
     align-items: center;
     gap: 6px;
-}
-
-.top-meta span i {
-    color: var(--clean-white);
 }
 
 /* Locate Us Top Action Pin */
@@ -87,17 +84,18 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--brand-red);
     color: var(--clean-white);
     text-decoration: none;
-    padding: 6px 16px;
+    padding: 8px 18px;
     font-family: var(--font-heading);
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 4px;
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.1s;
 }
 
 .btn-locate-top:hover {
     background-color: #B30000;
+    transform: scale(1.03);
 }
 
 /* Header & Nav Layout */
@@ -124,7 +122,7 @@ header {
 }
 
 .header-large-logo {
-    height: 65px;
+    height: 75px;
     width: auto;
     border: 1px solid var(--border-grey);
 }
@@ -134,7 +132,7 @@ header {
 }
 
 .main-brand-title {
-    font-size: 2.1rem;
+    font-size: 2.3rem;
     line-height: 1;
     text-align: left !important;
 }
@@ -142,7 +140,7 @@ header {
 .sub-brand-title {
     font-family: var(--font-accent);
     color: var(--brand-blue);
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     letter-spacing: 2px;
     font-weight: 700;
     text-transform: uppercase;
@@ -170,8 +168,8 @@ nav a:hover {
 
 /* Full-Width Company Banner Hero Section */
 .company-banner-hero {
-    background: linear-gradient(rgba(10, 77, 146, 0.92), rgba(10, 77, 146, 0.98)), url('../images/Visiting.jpg') center/cover no-repeat;
-    padding: 90px 0;
+    background: linear-gradient(rgba(10, 77, 146, 0.94), rgba(10, 77, 146, 0.98)), url('../images/Visiting.jpg') center/cover no-repeat;
+    padding: 100px 0;
     border-bottom: 6px solid var(--brand-red);
     text-align: center;
 }
@@ -188,19 +186,33 @@ nav a:hover {
 }
 
 .hero-center-logo {
-    height: 120px;
+    height: 130px;
     width: auto;
     border: 4px solid var(--clean-white);
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 
-/* Custom Large Font Typography for Hero Brand Element */
 .hero-brand-headline {
     font-family: var(--font-heading);
     font-size: 3.8rem !important;
-    color: var(--clean-white) !important; /* Retaining visibility clarity against the blue layer background */
+    color: var(--clean-white) !important;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Enhanced Class 1 Contractor Badge Style */
+.hero-class-tagline {
+    font-family: var(--font-heading);
+    color: var(--clean-white);
+    background-color: var(--brand-red);
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 4px;
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 15px rgba(213, 0, 0, 0.4);
+    margin-bottom: 20px;
+    display: inline-block;
 }
 
 .hero-tagline-sub {
@@ -210,13 +222,6 @@ nav a:hover {
     font-weight: 600;
     line-height: 1.3;
     text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.hero-legal-details {
-    color: var(--border-grey);
-    font-size: 1.1rem;
-    max-width: 800px;
     margin-bottom: 35px;
 }
 
@@ -260,25 +265,74 @@ nav a:hover {
 
 /* About Company Block */
 .about-section-block {
-    padding: 70px 0;
+    padding: 80px 0;
     background-color: var(--clean-white);
 }
 
 .text-center-wrapper {
-    max-width: 850px;
+    max-width: 900px;
     text-align: center;
 }
 
 .about-description-text {
     font-size: 1.15rem;
-    line-height: 1.7;
+    line-height: 1.8;
     color: var(--industrial-grey);
+}
+
+/* Technical Heavy Gauge Block */
+.technical-spec-block {
+    padding: 40px 0;
+    background-color: var(--light-grey-bg);
+}
+
+.spec-card-highlight {
+    background-color: var(--clean-white);
+    border-left: 6px solid var(--brand-red);
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    text-align: center;
+}
+
+.spec-icon {
+    font-size: 3rem;
+    color: var(--brand-blue);
+    margin-bottom: 15px;
+}
+
+.spec-card-highlight h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.spec-card-highlight p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.gauge-badges {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gauge-badge {
+    background-color: var(--brand-blue);
+    color: var(--clean-white);
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 10px 25px;
+    border-radius: 4px;
 }
 
 /* Why Choose Us Parameters */
 .why-choose-block {
     background-color: var(--brand-blue);
-    padding: 60px 0;
+    padding: 70px 0;
 }
 
 .section-title-light {
@@ -295,10 +349,11 @@ nav a:hover {
 
 .why-box {
     background-color: var(--clean-white);
-    padding: 30px;
+    padding: 35px 25px;
     border-radius: 6px;
     text-align: center;
     border-top: 5px solid var(--brand-red);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .why-box i {
@@ -314,7 +369,44 @@ nav a:hover {
 
 .why-box p {
     font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 1.6;
+}
+
+/* Mission & Vision Section */
+.mission-vision-block {
+    padding: 80px 0;
+    background-color: var(--clean-white);
+}
+
+.corporate-flex-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.corp-card {
+    background-color: var(--light-grey-bg);
+    border: 1px solid var(--border-grey);
+    padding: 40px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.corp-icon {
+    font-size: 2.5rem;
+    color: var(--brand-blue);
+    margin-bottom: 15px;
+}
+
+.corp-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.corp-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
 
 /* Strict 3-Column Products Layout Grid */
@@ -337,11 +429,12 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, transform 0.2s;
 }
 
 .product-item-card:hover {
     border-color: var(--brand-blue);
+    transform: translateY(-2px);
 }
 
 .product-item-card h3 {
@@ -349,10 +442,35 @@ nav a:hover {
     margin: 0;
 }
 
+/* Branded Components Section */
+.brands-section {
+    padding: 50px 0;
+    background-color: var(--clean-white);
+}
+
+.brand-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.brand-flex span {
+    font-family: var(--font-accent);
+    font-size: 1.4rem;
+    color: var(--brand-blue);
+    font-weight: 700;
+    border: 2px solid var(--border-grey);
+    padding: 10px 25px;
+    border-radius: 4px;
+    background-color: var(--light-grey-bg);
+}
+
 /* Strict 3-Column Image Showcase Gallery Grid */
 .gallery-section-block {
     padding: 70px 0;
-    background-color: var(--clean-white);
+    background-color: var(--light-grey-bg);
 }
 
 .gallery-3column-grid {
@@ -362,11 +480,12 @@ nav a:hover {
 }
 
 .gallery-item {
-    background-color: var(--light-grey-bg);
+    background-color: var(--clean-white);
     padding: 12px;
     border: 1px solid var(--border-grey);
     border-radius: 4px;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
 .gallery-item img {
@@ -388,7 +507,7 @@ nav a:hover {
 
 /* Contact Block Layout & Custom Stacked Column Form */
 .contact-footer-block {
-    background-color: var(--light-grey-bg);
+    background-color: var(--clean-white);
     border-top: 4px solid var(--brand-blue);
     padding: 70px 0 0 0;
 }
@@ -404,6 +523,7 @@ nav a:hover {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 25px;
+    text-align: left;
 }
 
 .address-paragraph i {
@@ -413,7 +533,7 @@ nav a:hover {
 
 .directory-title-label {
     text-align: left !important;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 15px;
 }
 
@@ -422,23 +542,26 @@ nav a:hover {
 }
 
 .directory-ul-list li {
-    padding: 10px 0;
-    font-size: 1.05rem;
+    padding: 12px 0;
+    font-size: 1.1rem;
     font-weight: 600;
     border-bottom: 1px solid var(--border-grey);
+    text-align: left;
 }
 
-.directory-ul-list a {
+/* Uniform directory typography matching body style font */
+.footer-phone-link {
     text-decoration: none;
     color: var(--brand-blue);
-    font-family: var(--font-accent);
+    font-family: var(--font-base) !important; 
     font-weight: 700;
     margin-left: 5px;
+    font-size: 1.15rem;
 }
 
 /* Clean Column Form Elements */
 .quote-form-column {
-    background-color: var(--clean-white);
+    background-color: var(--light-grey-bg);
     padding: 40px;
     border-radius: 6px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.04);
@@ -457,6 +580,7 @@ nav a:hover {
     text-transform: uppercase;
     margin-bottom: 6px;
     color: var(--industrial-grey);
+    text-align: left;
 }
 
 .vertical-quote-form input {
@@ -498,7 +622,7 @@ nav a:hover {
 }
 
 .embedded-map-container {
-    border: 4px solid var(--clean-white);
+    border: 4px solid var(--border-grey);
     border-radius: 4px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     overflow: hidden;
@@ -543,8 +667,9 @@ nav a:hover {
 @media (max-width: 900px) {
     .why-choose-3col-grid,
     .products-3column-grid,
-    .gallery-3column-grid {
-        grid-template-columns: 1fr 1fr;
+    .gallery-3column-grid,
+    .corporate-flex-grid {
+        grid-template-columns: 1fr;
     }
     .contact-split-layout {
         grid-template-columns: 1fr;
@@ -560,12 +685,8 @@ nav a:hover {
         flex-direction: column;
         text-align: center;
     }
-}
-
-@media (max-width: 600px) {
-    .why-choose-3col-grid,
-    .products-3column-grid,
-    .gallery-3column-grid {
-        grid-template-columns: 1fr;
+    .hero-class-tagline {
+        font-size: 1.2rem;
+        padding: 10px 15px;
     }
 }
